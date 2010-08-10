@@ -1,0 +1,7 @@
+h2. Development Configuration
+
+This is a repository of my current UNIX/Linux vim/screen development configuration made to make 
+my life easier when changing my dev setup on various machines. Feel free to use my same environment 
+if you feel that it's useful for you.
+
+This repository exists mostly for my own good, so use at your own risk. No support is provided.
