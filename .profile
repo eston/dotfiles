@@ -1,24 +1,49 @@
-# ~/.profile: executed by the command interpreter for login shells.
-# This file is not read by bash(1), if ~/.bash_profile or ~/.bash_login
-# exists.
-# see /usr/share/doc/bash/examples/startup-files for examples.
-# the files are located in the bash-doc package.
+# env
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+export SVN_EDITOR="vim"
 
-# the default umask is set in /etc/profile; for setting the umask
-# for ssh logins, install and configure the libpam-umask package.
-#umask 022
+# file
+alias sl=ls
+alias pers="cd ~/Code/Personal"
+alias pro="cd ~/Code/Professional"
+alias dpers="cd ~/Design/Personal"
+alias dpro="cd ~/Design/Professional"
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+# processes
+alias psx="ps ax | grep $1"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+# dev
+alias v="vim"
+alias k="clear"
 
-alias sl="ls"
+# git
+alias gitignore="vim .gitignore"
+alias gst="git status"
+alias ga="git add"
+alias gc="git commit -a"
+alias gp="git pull origin master"
+alias gpull="git pull origin master"
+alias gpush="git push origin master"
+alias grev="git checkout --"
+alias gdiff="git diff"
+
+# svn
+alias up="svn up"
+alias co="svn co"
+alias sdiff="svn diff"
+alias revert="svn revert"
+
+# rails
+alias console="script/console"
+alias migrate="rake db:migrate"
+
+
+# display for iterm
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    ;;
+*)
+    ;;
+esac

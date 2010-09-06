@@ -15,7 +15,7 @@ set hlsearch
 set tags=./tags
 set path+=**
 
-set t_Co=256
+" set t_Co=256
 
 colors molokai
 colorscheme molokai
