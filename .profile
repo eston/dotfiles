@@ -1,13 +1,11 @@
-# env
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+#env
+export PATH=~/Developer/bin:/opt/local/bin:/opt/local/sbin:$PATH
 export SVN_EDITOR="vim"
+
+source ~/.env_secret
 
 # file
 alias sl=ls
-alias pers="cd ~/Code/Personal"
-alias pro="cd ~/Code/Professional"
-alias dpers="cd ~/Design/Personal"
-alias dpro="cd ~/Design/Professional"
 
 # processes
 alias psx="ps ax | grep $1"
@@ -15,6 +13,7 @@ alias psx="ps ax | grep $1"
 # dev
 alias v="vim"
 alias k="clear"
+alias ack="script/gack"
 
 # git
 alias gitignore="vim .gitignore"
